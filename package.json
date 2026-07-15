@@ -1,0 +1,35 @@
+{
+  "name": "royal-eagle-crm",
+  "version": "1.0.0",
+  "description": "CRM backend for Royal Eagle Web and Marketing",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node test/smoke.test.js",
+    "test:notifications": "node test/notifications.test.js",
+    "test:growth": "node test/growth.test.js",
+    "test:worker": "node test/worker-smoke.test.js",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:41729/git/royaleagleweb/CRMBACEND"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^9.0.3",
+    "web-push": "^3.6.7"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "wrangler": "^4.110.0"
+  }
+}

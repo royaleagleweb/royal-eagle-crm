@@ -1,0 +1,17 @@
+# One-click deploy blueprint for https://render.com
+# Render dashboard -> New -> Blueprint -> pick this repository.
+services:
+  - type: web
+    name: royal-eagle-crm
+    runtime: docker
+    plan: starter # smallest paid plan; required for the persistent disk that stores your data
+    autoDeploy: true
+    disk:
+      name: crm-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_FILE
+        value: /data/crm.sqlite

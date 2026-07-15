@@ -1,0 +1,28 @@
+// Cloudflare Workers configuration for the Royal Eagle CRM.
+// The Node/Express backend in src/ is untouched — this deploys the Workers
+// port in worker/ with the same SPA from public/.
+{
+  "name": "royal-eagle-crm",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-06-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "royal-eagle-crm-db",
+      "database_id": "ef4bd759-1e2c-485e-9bfa-090af058e135",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FILES",
+      "bucket_name": "royal-eagle-crm-files","preview_bucket_name": "royal-eagle-crm-files"
+    }
+  ],
+  "assets": {
+    "directory": "public",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"],
+    "binding": "ASSETS"
+  }
+}

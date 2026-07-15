@@ -1,0 +1,14 @@
+{
+  "name": "Royal Eagle CRM",
+  "short_name": "Royal Eagle",
+  "description": "Royal Eagle Web and Marketing — CRM, pipeline, invoicing and reporting.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f6fa",
+  "theme_color": "#1a3c6e",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
